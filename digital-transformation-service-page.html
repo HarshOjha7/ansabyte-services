@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Transformation Services | AnsaByte</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .navbar { background: white; padding: 1.5rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .navbar-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #0066cc; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #1761a0; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center; color: white; padding: 6rem 2rem; text-align: center; min-height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 700px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .btn { display: inline-block; padding: 0.8rem 2rem; background: #1761a0; color: white; text-decoration: none; border-radius: 5px; font-weight: 600; transition: background 0.3s; border: none; cursor: pointer; font-size: 1rem; }
+        .btn:hover { background: #114d7a; }
+        .section { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; }
+        .section h2 { font-size: 2.5rem; color: #1761a0; margin-bottom: 1.5rem; text-align: center; }
+        .section-content { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 2rem; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .benefit-card { background: #f8f9fa; padding: 2rem; border-left: 4px solid #1761a0; border-radius: 5px; }
+        .benefit-card h3 { color: #1761a0; margin-bottom: 0.5rem; font-size: 1.3rem; }
+        .benefit-card p { color: #666; font-size: 1rem; }
+        .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .use-case { background: white; border: 1px solid #ddd; padding: 2rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .use-case h3 { color: #1761a0; margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .why-choose { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .reason { text-align: center; }
+        .reason h3 { color: #1761a0; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .reason p { color: #666; font-size: 0.95rem; }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .step { counter-increment: step-counter; padding: 2rem; background: #f0f4ff; border-radius: 5px; text-align: center; border-top: 3px solid #1761a0; }
+        .step::before { content: counter(step-counter); display: block; font-size: 2.5rem; font-weight: bold; color: #1761a0; margin-bottom: 0.5rem; }
+        .step h3 { color: #333; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .step p { color: #666; font-size: 0.95rem; }
+        .case-studies { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .case-study { background: #f8f9fa; padding: 2rem; border-radius: 5px; border-left: 4px solid #1761a0; }
+        .case-study h3 { color: #333; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .case-study .result { color: #1761a0; font-weight: 600; margin-top: 1rem; font-size: 1.1rem; }
+        .cta-banner { background: linear-gradient(135deg, #1761a0, #0d3d7a); color: white; padding: 4rem 2rem; text-align: center; margin: 3rem auto; max-width: 1200px; border-radius: 5px; }
+        .cta-banner h2 { color: white; margin-bottom: 1rem; }
+        .cta-banner p { font-size: 1.1rem; margin-bottom: 2rem; }
+        footer { background: #333; color: white; padding: 3rem 2rem; margin-top: 4rem; text-align: center; }
+        footer p { margin-bottom: 0.5rem; }
+        counter-reset: step-counter;
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">AnsaByte</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Digital Transformation Services</h1>
+        <p>Modernize Your Business for the Digital Era</p>
+        <a href="#contact" class="btn">Start Your Transformation</a>
+    </section>
+
+    <section class="section" id="about">
+        <h2>Service Overview</h2>
+        <div class="section-content">
+            <p>Digital transformation reshapes how your organization operates and delivers value. We guide enterprises through technology adoption, process redesign, and culture change to unlock new capabilities, improve efficiency, and seize digital opportunities.</p>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Key Benefits</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Operational Efficiency</h3>
+                <p>Automate processes and reduce costs through digital solutions.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Customer Experience</h3>
+                <p>Deliver seamless, digital-first customer journeys.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Agility</h3>
+                <p>Respond faster to market changes and opportunities.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Innovation</h3>
+                <p>Build new business models and revenue streams.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Use Cases & Examples</h2>
+        <div class="use-cases-grid">
+            <div class="use-case">
+                <h3>Legacy Modernization</h3>
+                <p>Cloud migration and system integration for modern platforms.</p>
+            </div>
+            <div class="use-case">
+                <h3>Customer Experience</h3>
+                <p>Digital channel optimization and personalization systems.</p>
+            </div>
+            <div class="use-case">
+                <h3>Business Process</h3>
+                <p>Automation and workflow redesign for efficiency.</p>
+            </div>
+            <div class="use-case">
+                <h3>Analytics Platform</h3>
+                <p>Build data and insights infrastructure for decision making.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Why Choose AnsaByte</h2>
+        <div class="why-choose">
+            <div class="reason">
+                <h3>End-to-End Expertise</h3>
+                <p>Strategy, technology, process, and change management.</p>
+            </div>
+            <div class="reason">
+                <h3>Proven Framework</h3>
+                <p>Structured transformation methodology that delivers.</p>
+            </div>
+            <div class="reason">
+                <h3>Change Management</h3>
+                <p>Support your organization through digital change.</p>
+            </div>
+            <div class="reason">
+                <h3>Technology Partnership</h3>
+                <p>Work with leading cloud and software vendors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Our Process & Methodology</h2>
+        <div class="process-steps">
+            <div class="step">
+                <h3>Assessment & Strategy</h3>
+                <p>Evaluate current state and define transformation vision.</p>
+            </div>
+            <div class="step">
+                <h3>Roadmap Development</h3>
+                <p>Create phased transformation plan with clear milestones.</p>
+            </div>
+            <div class="step">
+                <h3>Technology Selection</h3>
+                <p>Choose right tools and platforms for your needs.</p>
+            </div>
+            <div class="step">
+                <h3>Implementation</h3>
+                <p>Execute transformation initiatives with expert guidance.</p>
+            </div>
+            <div class="step">
+                <h3>Adoption & Optimization</h3>
+                <p>Drive user adoption and continuous improvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Case Studies & Results</h2>
+        <div class="case-studies">
+            <div class="case-study">
+                <h3>Manufacturing Client</h3>
+                <p>Digitized entire supply chain from procurement to delivery.</p>
+                <div class="result">Result: -40% reduction in lead time</div>
+            </div>
+            <div class="case-study">
+                <h3>Insurance Client</h3>
+                <p>Launched digital customer portal with omnichannel services.</p>
+                <div class="result">Result: +150% increase in digital engagement</div>
+            </div>
+            <div class="case-study">
+                <h3>Retail Client</h3>
+                <p>Implemented omnichannel strategy integrating online and offline.</p>
+                <div class="result">Result: +32% increase in total sales</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner" id="contact">
+        <h2>Transform Your Business for the Future</h2>
+        <p>Our experts will guide your digital transformation journey.</p>
+        <a href="https://cms.sitehub.io/626676#contact" class="btn">Begin Your Transformation</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AnsaByte. All rights reserved.</p>
+        <p>Transforming Business Decisions With AI, Data & Cybersecurity</p>
+    </footer>
+</body>
+</html>
